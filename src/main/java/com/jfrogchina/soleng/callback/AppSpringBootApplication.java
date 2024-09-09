@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -24,9 +23,4 @@ public class AppSpringBootApplication {
 		return "Hello Spring boot!";
 	}
 
-	@PostMapping(value = "/callbackELM")
-	public String callbackELM(){
-		logger.info("--------------- start callbackELM ------------------------");
-		return "Hello ELM";
-	}
 }

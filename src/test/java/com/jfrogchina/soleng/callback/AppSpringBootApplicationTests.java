@@ -7,7 +7,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 class AppSpringBootApplicationTests {
 
 	@Test
-	void contextLoads() {
+	static void contextLoads() {
+	}
+
+	@Test
+    void httpGet(){
+//		HttpRestApiUtils.httpGet();
 	}
 
 }
