@@ -3,6 +3,7 @@ package com.jfrogchina.soleng.callback.service.impl;
 import com.jfrogchina.soleng.callback.service.ArtifactoryService;
 import com.jfrogchina.soleng.callback.service.bean.ArtifactBean;
 import com.jfrogchina.soleng.callback.utils.ArtifactoryResource;
+import com.jfrogchina.soleng.callback.utils.Constant;
 import com.jfrogchina.soleng.callback.utils.service.HttpRestApiService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,7 +30,7 @@ public class ArtifactoryServiceImpl implements ArtifactoryService {
     public String getartifactMsg(String repoKey, String itemPath, String token) {
 //        logger.info("Get Item Properties: {}", artifactoryResource.getRestapiResource().getPrefix() + artifactoryResource.getRestapiResource().getGetItemProperties());
 
-        String apiUrl = "https://demo.jfrogchina.com/artifactory/api/storage/" + repoKey + "/" + itemPath + "?properties";
+        String apiUrl = Constant.ARTIFACTORY_URL + Constant.QUERY_PROPERTIES_URL + repoKey + "/" + itemPath + "?properties";
 
         String artifactsPropertiesMsg = httpRestApiService.httpGet(apiUrl, token);
 
